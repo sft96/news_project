@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+{% if menu %}
+{% for p in menu %}
+<li><a href="{{ url_for(p.url) }}">{{p.title}}</a></li>
+{% endfor %}
+{% endif %}
+{% block content %}
+{% endblock %}
+</body>
+</html>
